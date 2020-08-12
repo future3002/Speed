@@ -1,0 +1,153 @@
+﻿<Window x:Class="Speed.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Speed"
+        mc:Ignorable="d"
+        WindowState="Normal" MouseMove="Window_MouseMove" Loaded="Window_Loaded"
+        Title="Speed" Height="38" Width="87" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize" Cursor="Arrow" Topmost="True" ShowInTaskbar="False">
+    <Canvas Cursor="Hand">
+        <Border Name="SpeedContent" CornerRadius="2" BorderThickness="1" Background="#FF11113C" Cursor="Hand">
+            <Border.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="bgcolor" Header="背景色">
+                        <MenuItem.Icon>
+                            <Image Source="color.png"></Image>
+                        </MenuItem.Icon>
+                        <MenuItem Click="ColorControl" InputGestureText="透明">
+                            <MenuItem.Header>
+                                <Label Content="透明" Background="#02FFFFFF" Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Click="ColorControl" InputGestureText="白色">
+                            <MenuItem.Header>
+                                <Label Content="纯白" Background="White"  Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Click="ColorControl" InputGestureText="颜色一">
+                            <MenuItem.Header>
+                                <Label Content="色一" Background="#FF11113C"  Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Click="ColorControl" InputGestureText="颜色二">
+                            <MenuItem.Header>
+                                <Label Content="色二" Background="#FFF36F6F"  Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Click="ColorControl" InputGestureText="颜色三">
+                            <MenuItem.Header>
+                                <Label Content="色三" Background="#FFDA28E2"  Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Click="ColorControl" InputGestureText="颜色四">
+                            <MenuItem.Header>
+                                <Label Content="色四" Background="#FFEC136C"  Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Click="ColorControl" InputGestureText="颜色五">
+                            <MenuItem.Header>
+                                <Label Content="色五" Background="#FFF16834"  Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Click="ColorControl" InputGestureText="颜色六">
+                            <MenuItem.Header>
+                                <Label Content="色六" Background="#FFE1F1C9"  Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1" />
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Click="ColorControl" InputGestureText="颜色七">
+                            <MenuItem.Header>
+                                <Label Content="色七" Background="#FF25E4E4"  Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Click="ColorControl" InputGestureText="颜色八">
+                            <MenuItem.Header>
+                                <Label Content="色八" Background="#FFF1E92E"  Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Click="ColorControl" InputGestureText="颜色九">
+                            <MenuItem.Header>
+                                <Label Content="色九" Background="#FF9324E0"  Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Name="ArrowColor" Header="箭头颜色">
+                        <MenuItem.Icon>
+                            <Image Source="arrow.png"></Image>
+                        </MenuItem.Icon>
+                        <MenuItem Click="ArrowControl" InputGestureText="默认">
+                            <MenuItem.Header>
+                                <Label Content="默认" Background="#FF60F77D" Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Click="ArrowControl" InputGestureText="白色">
+                            <MenuItem.Header>
+                                <Label Content="白色" Background="White"  Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Click="ArrowControl" InputGestureText="黑色">
+                            <MenuItem.Header>
+                                <Label Content="黑色" Background="Black"  Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                    </MenuItem>
+                    <MenuItem Name="FontColor" Header="字体颜色">
+                        <MenuItem.Icon>
+                            <Image Source="font.png"></Image>
+                        </MenuItem.Icon>
+                        <MenuItem Click="FontControl" InputGestureText="默认">
+                            <MenuItem.Header>
+                                <Label Content="默认" Background="White" Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Click="FontControl" InputGestureText="绿色">
+                            <MenuItem.Header>
+                                <Label Content="绿色" Background="#FF60F77D"  Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                        <MenuItem Click="FontControl" InputGestureText="黑色">
+                            <MenuItem.Header>
+                                <Label Content="黑色" Background="Black"  Foreground="Transparent" BorderBrush="#FFAE9494" BorderThickness="1,1,1,1"/>
+                            </MenuItem.Header>
+                        </MenuItem>
+                    </MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Name="display" Header="显示">
+                        <MenuItem.Icon>
+                            <Image Source="location.png"></Image>
+                        </MenuItem.Icon>
+                        <MenuItem Name="position" Header="固定位置" Click="DragControl" IsCheckable="True"/>
+                        <MenuItem Name="topWindow" Header="一直置顶" Click="TopControl" IsCheckable="True"/>
+                    </MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Name="close"  Header="关闭" Click="CloseWindow">
+                        <MenuItem.Icon>
+                            <Image Source="close.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </Border.ContextMenu>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="85*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Row="0" Grid.Column="0" Height="18" Orientation="Horizontal"  VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <Label Name="ArrowUp" Content="↑" Width="18" Height="18" Padding="5,0,5,3" Foreground="#FF60F77D" FontSize="16" FontWeight="Bold" VerticalAlignment="Bottom" ScrollViewer.CanContentScroll="True"/>
+                    <Label Name="UpSpeed" Content="0k/s" Width="77" Margin="-9,0,0,0" FontSize="12" Padding="5,2,0,2" FontStyle="Italic" FontWeight="Bold" Foreground="White" VerticalAlignment="Bottom" HorizontalContentAlignment="Center"/>
+                </StackPanel>
+                <StackPanel  Grid.Row="1" Grid.Column="0" Height="18" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <Label Name="ArrowDown" Content="↑" Width="18" Height="18" Padding="5,0,5,3" Foreground="#FF60F77D" FontSize="16" FontWeight="Bold" VerticalAlignment="Bottom" ScrollViewer.CanContentScroll="True">
+                        <Label.RenderTransform>
+                            <RotateTransform Angle="180" CenterX="9" CenterY="9"></RotateTransform>
+                        </Label.RenderTransform>
+                    </Label>
+                    <Label Name="DownSpeed" Content="0k/s" Width="77" Margin="-9,0,0,0" FontSize="12" Padding="5,1,0,2" FontStyle="Italic" FontWeight="Bold" Foreground="White" VerticalAlignment="Top" HorizontalContentAlignment="Center"></Label>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Canvas>
+</Window>

@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Speed" GeneratedClassName="Config">
+  <Profiles />
+  <Settings>
+    <Setting Name="CanDrag" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="IsTop" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Left" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Top" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="BgColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#FF11113C</Value>
+    </Setting>
+    <Setting Name="ArrowColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#FF60F77D</Value>
+    </Setting>
+    <Setting Name="FontColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
